@@ -1001,7 +1001,8 @@ a:focus-visible {
 
   .about-portrait {
     width: min(100%, 360px);
-    height: clamp(290px, 84vw, 380px);
+    height: auto;
+    aspect-ratio: .82;
     margin: 0 auto;
   }
 
