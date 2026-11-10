@@ -609,8 +609,8 @@ a:focus-visible {
 
 .project-controls {
   position: absolute;
-  z-index: 10;
-  top: clamp(72px, 8vw, 108px);
+  z-index: 60;
+  top: 50%;
   right: -22px;
   left: -22px;
   display: flex;
@@ -1170,7 +1170,7 @@ a:focus-visible {
   }
 
   .project-controls {
-    top: clamp(72px, 22vw, 92px);
+    top: 50%;
     right: -8px;
     left: -8px;
   }
