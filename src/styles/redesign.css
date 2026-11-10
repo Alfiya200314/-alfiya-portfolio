@@ -475,19 +475,35 @@ a:focus-visible {
   text-align: left;
 }
 
+.projects > .container {
+  width: min(1180px, calc(100% - 48px));
+  max-width: 1180px;
+  margin-inline: auto;
+}
+
+.project-carousel {
+  min-width: 0;
+}
+
 .project-track {
   display: flex;
+  width: 100%;
+  min-width: 0;
   height: auto;
   gap: 20px;
-  padding: 0 1px 18px;
+  padding: 0 1px 8px;
   overflow-x: auto;
   overflow-y: hidden;
+  overscroll-behavior-x: contain;
   perspective: none;
   scroll-behavior: smooth;
   scroll-padding-inline: 1px;
   scroll-snap-type: x mandatory;
-  scrollbar-width: thin;
-  scrollbar-color: var(--color-gold-muted) transparent;
+  scrollbar-width: none;
+}
+
+.project-track::-webkit-scrollbar {
+  display: none;
 }
 
 .projects .project-card,
@@ -495,10 +511,11 @@ a:focus-visible {
 .projects .project-card[data-offset="1"],
 .projects .project-card[data-offset="-2"],
 .projects .project-card[data-offset="2"] {
+  display: block;
   position: relative;
   top: auto;
   left: auto;
-  flex: 0 0 min(44%, 510px);
+  flex: 0 0 calc((100% - 40px) / 3);
   width: auto;
   height: auto;
   overflow: hidden;
@@ -905,6 +922,11 @@ a:focus-visible {
   .projects .project-card[data-offset="2"] {
     flex-basis: min(70%, 500px);
   }
+
+  .projects .project-card:not([data-offset="0"]) {
+    display: block;
+    pointer-events: auto;
+  }
 }
 
 @media (max-width: 620px) {
@@ -918,6 +940,10 @@ a:focus-visible {
   }
 
   .nav {
+    width: calc(100% - 32px);
+  }
+
+  .projects > .container {
     width: calc(100% - 32px);
   }
 
@@ -1117,6 +1143,11 @@ a:focus-visible {
   .projects .project-card[data-offset="-2"],
   .projects .project-card[data-offset="2"] {
     flex-basis: min(88%, 420px);
+  }
+
+  .projects .project-card:not([data-offset="0"]) {
+    display: block;
+    pointer-events: auto;
   }
 
   .project-info {
