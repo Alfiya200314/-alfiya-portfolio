@@ -487,6 +487,7 @@ a:focus-visible {
 
 .project-track {
   display: flex;
+  align-items: flex-start;
   width: 100%;
   min-width: 0;
   height: auto;
@@ -512,6 +513,7 @@ a:focus-visible {
 .projects .project-card[data-offset="-2"],
 .projects .project-card[data-offset="2"] {
   display: block;
+  align-self: flex-start;
   position: relative;
   top: auto;
   left: auto;
@@ -557,7 +559,7 @@ a:focus-visible {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
-  padding: 22px;
+  padding: 22px 22px 18px;
 }
 
 .project-company {
@@ -587,8 +589,7 @@ a:focus-visible {
   display: flex;
   flex-wrap: wrap;
   gap: 7px;
-  margin-top: auto;
-  margin-bottom: 20px;
+  margin-bottom: 16px;
 }
 
 .project-tags .ui-tag {
@@ -760,10 +761,6 @@ a:focus-visible {
     box-shadow: var(--shadow-overlay);
   }
 
-  .projects .project-card:hover .project-placeholder img {
-    transform: scale(1.035);
-  }
-
   .contact-social-links a:hover {
     color: var(--color-gold);
     transform: translateY(-3px);
@@ -772,6 +769,21 @@ a:focus-visible {
   .contact-social-links a:hover svg {
     border-color: var(--color-border-accent);
     transform: translateY(-2px);
+  }
+}
+
+@media (hover: hover) {
+  .projects .project-card:hover {
+    transform: none;
+  }
+
+  .projects .project-card:hover .project-surface {
+    transform: none;
+    filter: none;
+  }
+
+  .projects .project-card:hover .project-placeholder img {
+    transform: none;
   }
 }
 
