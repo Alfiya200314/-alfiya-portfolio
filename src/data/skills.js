@@ -1,8 +1,8 @@
 export const skills = [
-  { name: "HTML & CSS", level: 90 },
-  { name: "JavaScript", level: 82 },
-  { name: "React", level: 85 },
-  { name: "Tailwind CSS", level: 88 },
-  { name: "UI / UX Design", level: 78 },
-  { name: "Git & GitHub", level: 80 },
+  { category: "Frontend", items: ["HTML5", "CSS3", "JavaScript", "TypeScript", "React.js", "Tailwind CSS", "Bootstrap"] },
+  { category: "Backend", items: ["Node.js", "Express.js", "RESTful API Development"] },
+  { category: "Databases", items: ["MySQL", "SQL", "MongoDB (Basic)"] },
+  { category: "Libraries & Frameworks", items: ["React Router", "React Hooks", "jQuery", "GSAP", "Swiper.js", "AOS.js"] },
+  { category: "Development Concepts", items: ["CRUD Operations", "API Integration", "Responsive Web Design"] },
+  { category: "Tools & Workflow", items: ["Git", "GitHub", "Postman", "VS Code", "Vite", "XAMPP"] },
 ];
